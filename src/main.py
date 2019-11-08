@@ -1,4 +1,6 @@
+#!/usr/bin/python3
 # -*-coding:Utf-8 -*
+
 ##
 ## EPITECH PROJECT, 2019
 ## 101pong
@@ -7,12 +9,14 @@
 ##
 
 import sys
-sys.path.insert(1, "../")
 from sys import argv, stderr, exit
+
+sys.path.insert(1, "../")
 from classes import Vector
-from print_res import *
-from constants import *
-from help_option import *
+from src.constants import *
+from src.help_option import *
+from src.print_res import *
+from src.vectors import *
 
 if (is_help_option(argv)):
     print_description()
@@ -36,8 +40,8 @@ if (n < 0):
     print(NEG_N_MSG, file = stderr)
     exit(MY_EXIT_FAILURE)
 
-vector_1 = Vector(x0, y0, z0)
-vector_2 = Vector(x1, y1, z1)
+vector_1 = Vector.Vector(x0, y0, z0)
+vector_2 = Vector.Vector(x1, y1, z1)
 vel_vector = get_velocity_vector(vector_1, vector_2)
 ball_coordinates = get_ball_coordinates(vector_1, vel_vector, n)
 
