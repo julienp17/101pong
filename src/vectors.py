@@ -47,3 +47,12 @@ def get_normal_vector(vector: Vector):
 
 def get_vector_scale(vector: Vector):
     return float(sqrt(pow(vector.x, 2) + pow(vector.y, 2) + pow(vector.z, 2)))
+
+def ball_reach_paddle(z1: float, z2: float):
+    if (z1 < 0.0):
+        z1 = z1 * -1
+    if (z2 < 0.0):
+        z2 = z2 * -1
+    if (z1 > z2):
+        return (True)
+    return (False)
