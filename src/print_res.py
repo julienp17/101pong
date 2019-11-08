@@ -6,7 +6,9 @@
 ## Print the results
 ##
 
-from vector import *
+import sys
+sys.path.insert(1, "../")
+from classes import Vector
 
 def print_vel_vector(vector:Vector):
     print("The velocity vector of the ball is :")

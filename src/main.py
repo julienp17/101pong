@@ -6,9 +6,11 @@
 ## Main file for 101pong
 ##
 
+import sys
+sys.path.insert(1, "../")
 from sys import argv, stderr, exit
+from classes import Vector
 from print_res import *
-from vector import *
 from constants import *
 from help_option import *
 

@@ -1,21 +1,11 @@
-# -*-coding:Utf-8 -*
 ##
 ## EPITECH PROJECT, 2019
 ## 101pong
 ## File description:
-## Class Vector
+## Manipulate vectors
 ##
 
-class Vector:
-
-    """This class represents a vector.
-
-    It holds its x, y, and z value."""
-
-    def __init__(self, x:float, y:float, z:float):
-        self.x = x
-        self.y = y
-        self.z = z
+from ../classes/Vector import Vector
 
 def get_velocity_vector(vector_1: Vector, vector_2: Vector):
     velocity_vector = Vector(0, 0, 0)
