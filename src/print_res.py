@@ -11,7 +11,7 @@ sys.path.insert(1, "../")
 from classes import Vector
 
 def print_vel_vector(vector:Vector):
-    print("The velocity vector of the ball is :")
+    print("The velocity vector of the ball is:")
     print("(", end = "")
     print("%.2f" % vector.x + ", ", end = "")
     print("%.2f" % vector.y + ", ", end = "")
@@ -27,8 +27,8 @@ def print_ball_coordinates(ball_coordinates: Vector, t: int):
     print(")")
 
 def print_incidence_angle(incidence_angle: float):
-    if (incidence_angle < 0 or incidence_angle > 90):
+    if (incidence_angle < 0.0 or incidence_angle > 90.0):
         print("The ball won’t reach the paddle.")
     else:
         print("The incidence angle is:")
-        print(str(incidence_angle), "degrees")
+        print("%.2f" % incidence_angle, "degrees")
