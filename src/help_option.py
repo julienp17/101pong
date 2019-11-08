@@ -6,7 +6,7 @@
 ## Handles options
 ##
 
-def is_help_option(argv):
+def is_help_option(argv: list):
     if (len(argv) == 2 and (argv[1] == '-h' or argv[1] == '--help')):
         return True
     return False
