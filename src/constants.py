@@ -14,3 +14,4 @@ NB_ARGS                     =       8
 INVALID_NB_ARGS_MSG         =       "Invalid number of arguments"
 INCORRECT_TYPE_MSG          =       "A parameter is not of correct type"
 NEG_N_MSG                   =       "N must be greater or equal to zero"
+DIVISION_BY_ZERO_MSG        =       "Division by zero"
