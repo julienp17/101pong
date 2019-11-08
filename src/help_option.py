@@ -25,4 +25,4 @@ def print_description():
     print("    x1  ball abscissa at time t-1")
     print("    y1  ball ordinate at time t-1")
     print("    z1  ball altitude at time t-1")
-    print("    n   time shift (greater than or equal to zero, integer")
+    print("    n   time shift (greater than or equal to zero, integer)")
