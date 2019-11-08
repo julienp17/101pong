@@ -8,10 +8,7 @@
 ## Main file for 101pong
 ##
 
-import sys
 from sys import argv, stderr, exit
-
-sys.path.insert(1, "../")
 from classes import Vector
 from src.constants import *
 from src.help_option import *
