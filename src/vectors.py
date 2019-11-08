@@ -7,7 +7,9 @@
 
 import sys
 sys.path.insert(1, "../")
+from sys import stderr, exit
 from math import sqrt, pow, acos, degrees
+from src.constants import *
 from classes import Vector
 
 def get_velocity_vector(vector_1: Vector, vector_2: Vector):
@@ -40,6 +42,9 @@ def get_scalar_product(normal_vector1:Vector, normal_vector2: Vector):
 def get_normal_vector(vector: Vector):
     normal_vector = Vector.Vector(0, 0, 0)
     vector_scale = get_vector_scale(vector)
+    if (vector_scale == 0):
+        print(DIVISION_BY_ZERO_MSG, file = stderr)
+        exit(MY_EXIT_FAILURE)
     normal_vector.x = vector.x / vector_scale
     normal_vector.y = vector.y / vector_scale
     normal_vector.z = vector.z / vector_scale
