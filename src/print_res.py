@@ -26,9 +26,9 @@ def print_ball_coordinates(ball_coordinates: Vector, t: int):
     print("%.2f" % ball_coordinates.z, end = "")
     print(")")
 
-def print_incidence_angle(incidence_angle: float):
-    if (incidence_angle < 0.0 or incidence_angle > 90.0):
-        print("The ball won’t reach the paddle.")
-    else:
+def print_incidence_angle(ball_reach: bool, incidence_angle: float):
+    if (ball_reach):
         print("The incidence angle is:")
         print("%.2f" % incidence_angle, "degrees")
+    else:
+        print("The ball won’t reach the paddle.")
