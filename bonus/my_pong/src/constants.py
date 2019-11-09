@@ -24,8 +24,8 @@ FPS_LIMIT                   =       60
 
 BALL_WIDTH                  =       10
 BALL_HEIGHT                 =       10
-BALL_SPAWN_RANDOM_VX        =       randint(-3, 3)
-BALL_SPAWN_RANDOM_VY        =       randint(-3, 3)
+BALL_SPAWN_RANDOM_VX        =       3
+BALL_SPAWN_RANDOM_VY        =       3
 
 PADDLE_WIDTH                =       10
 PADDLE_HEIGHT               =       80

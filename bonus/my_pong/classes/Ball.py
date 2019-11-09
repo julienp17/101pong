@@ -24,8 +24,8 @@ class Ball(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = int((W_WIDTH - BALL_WIDTH) / 2)
         self.rect.y = int((W_HEIGHT - BALL_HEIGHT) / 2)
-        self.vx = BALL_SPAWN_RANDOM_VX
-        self.vy = BALL_SPAWN_RANDOM_VY
+        self.vx = randint(-BALL_SPAWN_RANDOM_VX, BALL_SPAWN_RANDOM_VX)
+        self.vy = randint(-BALL_SPAWN_RANDOM_VY, BALL_SPAWN_RANDOM_VY)
 
     def init_image_(self):
         image = pygame.Surface([PADDLE_WIDTH, PADDLE_HEIGHT])
