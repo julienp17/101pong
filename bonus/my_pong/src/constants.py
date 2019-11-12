@@ -23,7 +23,7 @@ BLUE                        =       (0, 0, 255)
 W_WIDTH                     =       800
 W_HEIGHT                    =       600
 W_TITLE                     =       "My Pong"
-FPS_LIMIT                   =       60
+FRAMERATE                   =       60
 
 BALL_WIDTH                  =       10
 BALL_HEIGHT                 =       10
@@ -37,9 +37,4 @@ PADDLE_HEIGHT               =       80
 PADDLE_MOVE_PIXELS          =       10
 
 NB_LINES_MIDDLE             =       12
-SCORE_FONT_SIZE             =       74
-
-INVALID_NB_ARGS_MSG         =       "Invalid number of arguments"
-INCORRECT_TYPE_MSG          =       "A parameter is not of correct type"
-NEG_N_MSG                   =       "N must be greater or equal to zero"
-DIVISION_BY_ZERO_MSG        =       "Division by zero"
+SCORE_FONT_SIZE             =       60
