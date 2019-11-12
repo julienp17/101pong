@@ -27,7 +27,7 @@ def display_ball(ball: Ball):
     pygame.draw.rect(ball.image, WHITE, [0, 0, ball.width, ball.height])
 
 def display_score(screen, score_left: int, score_right: int):
-    font = pygame.font.Font(None, SCORE_FONT_SIZE)
+    font = pygame.font.Font("assets/fonts/pixel_font.ttf", SCORE_FONT_SIZE)
     text = font.render(str(score_left), 1, WHITE)
     screen.blit(text, (int(W_WIDTH / 4), 20))
     text = font.render(str(score_right), 1, WHITE)
