@@ -18,7 +18,7 @@ from src.display import *
 pygame.init()
 pygame.mixer.init()
 w_size = (W_WIDTH, W_HEIGHT)
-screen = pygame.display.set_mode(w_size)
+screen = pygame.display.set_mode(w_size, pygame.FULLSCREEN)
 pygame.display.set_caption(W_TITLE)
 pygame.mixer.music.load("assets/audio/elevator.wav")
 goal_sound = pygame.mixer.Sound("assets/audio/coin.wav")
@@ -60,7 +60,10 @@ game_on = True
 game_is_paused = False
 while (game_on):
     for event in pygame.event.get():
+        keys = pygame.key.get_pressed()
         if (event.type == pygame.QUIT):
+            game_on = False
+        if (keys[pygame.K_ESCAPE]):
             game_on = False
     keys = pygame.key.get_pressed()
     if (keys[pygame.K_SPACE]):
