@@ -17,6 +17,7 @@ from src.display import *
 
 pygame.init()
 pygame.mixer.init()
+pygame.font.init()
 w_size = (W_WIDTH, W_HEIGHT)
 screen = pygame.display.set_mode(w_size, pygame.FULLSCREEN)
 pygame.display.set_caption(W_TITLE)
@@ -96,5 +97,5 @@ while (game_on):
         display_ball_trajectory(screen, ball)
         display_ball_movement_equations(screen, ball)
     pygame.display.flip()
-    clock.tick(FPS_LIMIT)
+    clock.tick(FRAMERATE)
 pygame.quit()
