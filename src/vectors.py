@@ -37,6 +37,12 @@ def get_vector_scale(vector: Vector):
     return float(sqrt(pow(vector.x, 2) + pow(vector.y, 2) + pow(vector.z, 2)))
 
 def ball_reach_paddle(z1: float, z2: float):
-    if (abs(z1) > abs(z2)):
+    if (z1 == 0):
+        return (False)
+    if ((z1 > 0.0 and z2 > 0.0) or (z1 < 0.0 and z2 < 0.0)):
+        if (abs(z1) > abs(z2)):
+            return (True)
+        else:
+            return (False)
+    else:
         return (True)
-    return (False)
