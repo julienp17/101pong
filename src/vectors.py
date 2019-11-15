@@ -31,8 +31,7 @@ def get_incidence_angle(vel_vector: Vector):
     vector_scale1 = get_vector_scale(vel_vector)
     vector_scale2 = get_vector_scale(paddle_vector)
     if (vector_scale1 == 0):
-        print(DIVISION_BY_ZERO_MSG, file = stderr)
-        exit(MY_EXIT_FAILURE)
+        return (0.0)
     scalar_product = vector_scale2 / vector_scale1
     return (degrees(acos(scalar_product)))
 
