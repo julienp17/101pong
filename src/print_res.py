@@ -31,4 +31,4 @@ def print_incidence_angle(ball_reach: bool, incidence_angle: float):
         print("The incidence angle is:")
         print("%.2f" % incidence_angle, "degrees")
     else:
-        print("The ball won’t reach the paddle.")
+        print("The ball won't reach the paddle.")
