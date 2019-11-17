@@ -28,32 +28,23 @@ def get_ball_coordinates(vector_1: Vector, vel_vector: Vector, t: int):
 
 def get_incidence_angle(vel_vector: Vector):
     paddle_vector = Vector.Vector(vel_vector.x, vel_vector.y, 0)
-    normal_vector1 = get_normal_vector(vel_vector)
-    normal_vector2 = get_normal_vector(paddle_vector)
-    scalar_product = get_scalar_product(normal_vector1, normal_vector2)
+    vector_scale1 = get_vector_scale(vel_vector)
+    vector_scale2 = get_vector_scale(paddle_vector)
+    if (vector_scale1 == 0):
+        return (0.0)
+    scalar_product = vector_scale2 / vector_scale1
     return (degrees(acos(scalar_product)))
-
-def get_scalar_product(normal_vector1:Vector, normal_vector2: Vector):
-    product = normal_vector1.x * normal_vector2.x
-    product += normal_vector1.y * normal_vector2.y
-    product += normal_vector1.z * normal_vector2.z
-    return (product)
-
-def get_normal_vector(vector: Vector):
-    normal_vector = Vector.Vector(0, 0, 0)
-    vector_scale = get_vector_scale(vector)
-    if (vector_scale == 0):
-        print(DIVISION_BY_ZERO_MSG, file = stderr)
-        exit(MY_EXIT_FAILURE)
-    normal_vector.x = vector.x / vector_scale
-    normal_vector.y = vector.y / vector_scale
-    normal_vector.z = vector.z / vector_scale
-    return (normal_vector)
 
 def get_vector_scale(vector: Vector):
     return float(sqrt(pow(vector.x, 2) + pow(vector.y, 2) + pow(vector.z, 2)))
 
 def ball_reach_paddle(z1: float, z2: float):
-    if (abs(z1) > abs(z2)):
+    if (z1 == 0):
+        return (False)
+    if ((z1 > 0.0 and z2 > 0.0) or (z1 < 0.0 and z2 < 0.0)):
+        if (abs(z1) > abs(z2)):
+            return (True)
+        else:
+            return (False)
+    else:
         return (True)
-    return (False)
