@@ -16,7 +16,7 @@ $(NAME):
 	chmod +x $(NAME)
 
 tests_run:
-	@python -m unittest discover test/ -v -b
+	@python3 -m unittest discover test/ -v -b
 
 fclean:
 	rm -f $(NAME)
