@@ -1,6 +1,8 @@
 # 101pong
 > Mathematical Project
+
 > Work on a 3D version of the famous game Pong
+
 > 2 students, made with [Tristan Bourgeois](https://www.linkedin.com/in/tristan-bourgeois-821b5b196/)
 
 - [Description](#description)
@@ -25,6 +27,7 @@ The program must print :
 ### Grade
 
 ![GRADE](bonus/assets/images/grade_black.png)
+
 Marvin couldn't find our unit tests.
 Only the case when the incidence angle was equal to zero was not treated.
 
